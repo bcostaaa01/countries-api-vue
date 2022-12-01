@@ -1,5 +1,5 @@
 <template>
-  <h1>Hello world!</h1>
+  <h1>Countries API</h1>
   <ApiData />
 </template>
 
