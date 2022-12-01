@@ -1,14 +1,15 @@
 <template>
   <h1>Hello world!</h1>
+  <ApiData />
 </template>
 
 <script>
-
+import ApiData from './components/ApiData.vue';
 
 export default {
   name: 'App',
   components: {
-
+    ApiData
   }
 }
 </script>
