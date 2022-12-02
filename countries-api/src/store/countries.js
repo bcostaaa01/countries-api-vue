@@ -16,6 +16,12 @@ const actions = {
     setAllCountries({ commit }, data) {
         commit("SET_ALL_COUNTRIES", data)
     },
+    getCountriesData() {
+        console.log('action has been called')
+        const response = axios.get(API)
+        console.log(response)
+        // .then((response) => response)
+    }
 };
 
 const getters = {

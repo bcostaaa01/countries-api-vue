@@ -24,17 +24,20 @@ export default {
       data: [],
     };
   },
-  methods: {
-    async getData() {
-      try {
-        const response = await fetch("https://restcountries.com/v3.1/all");
+//   methods: {
+//     async getData() {
+//       try {
+//         const response = await fetch("https://restcountries.com/v3.1/all");
 
-        this.data = await response.json();
-      } catch (err) {
-        console.log(err);
-      }
-    },
-  },
+//         this.data = await response.json();
+//       } catch (err) {
+//         console.log(err);
+//       }
+//     },
+//   },
+    mounted() {
+        this.$store.dispatch("store/getCountriesData")
+    }
 };
 </script>
 
