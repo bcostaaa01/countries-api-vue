@@ -12,11 +12,13 @@
         {{ item.flag }}
       </div>
     </div>
-    <button @click="getData">get data</button>
+    <button @click="getStore">get data</button>
   </div>
 </template>
 
 <script>
+// import { mapActions } from 'vuex';
+
 export default {
   name: "ApiData",
   data() {
@@ -35,8 +37,13 @@ export default {
 //       }
 //     },
 //   },
-    mounted() {
-        this.$store.dispatch("store/getCountriesData")
+    methods: {
+        getStore () {
+            console.log(this.$store)
+        }
+       
+            // ...mapActions(["getAllCountries"])
+        // this.$store.dispatch("countries/getCountriesData")
     }
 };
 </script>

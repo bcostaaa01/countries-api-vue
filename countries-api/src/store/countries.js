@@ -1,4 +1,8 @@
 import axios from "axios";
+import Vue from "vue"
+import Vuex from "vuex"
+
+Vue.use(Vuex)
 
 const API = process.env.VUE_APP_API_BASE_URL;
 
@@ -30,11 +34,9 @@ const getters = {
     }
 };
 
-const countriesModule = {
-    state,
-    mutations,
-    actions,
-    getters,
-};
-
-export default countriesModule;
+export default new Vue.Store({
+    state: state,
+    mutations: mutations,
+    actions: actions,
+    getters: getters,
+})
